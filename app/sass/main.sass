@@ -1,0 +1,632 @@
+// 0 Utilities
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+html,body
+  height: 100%
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	height: 100%
+	padding-top: 80px
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+a
+	transition: .2s
+	&:hover
+		text-decoration: none
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.flex-fill
+	flex: 1 1 auto
+
+//*********
+//Title:
+//
+// 0 Utilities
+//
+// 1 Top menu
+//  1.1 Logo
+//  1.2 Main menu
+//  1.3 Login
+//   1.3.1 Login menu
+//
+// 2 Content
+//  2.1 Sidebar
+//  2.2 Main
+//   2.2.3 Aritcle
+//	 2.2.4 Pagination
+//  2.3 Add block
+//
+// 3 Footer
+//*********
+
+// 1 Top menu
+.top-menu-wrap
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 10
+	height: 80px
+	background: #FAFAFA
+
+//  1.1 Logo
+.logo-wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	height: 80px
+	align-items: center
+	background: #E0E0E0
+.logo
+	font-size: 24px
+	font-weight: bold
+	&:hover
+		text-decoration: none
+
+//  1.2 Main menu
+.main-menu-wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	height: 80px
+	align-items: center
+	padding: 0
+.main-menu
+	margin: 0
+	padding: 0
+	list-style: none
+	height: 80px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	li
+		display: inline-block
+		height: 80px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		a
+			padding: 0 10px
+			height: 80px
+			transition: .2s
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			color: #424242
+			font-size: 18px
+			&:hover, &.active
+				font-weight: bold
+				background: #E0E0E0
+				text-decoration: none
+			&:after
+				line-height: 0
+				display: block
+				content: attr(title)
+				font-weight: bold
+				height: 0
+				overflow: hidden
+				visibility: hidden
+		&:first-child a
+			padding-left: 20px
+//  1.3 Login
+.login-wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	height: 80px
+	align-items: center
+	position: relative
+.login
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: row
+	color: #BDBDBD
+	transition: .2s
+	font-size: 18px
+	background: transparent
+	border: 0
+	outline: none
+	&:before
+		content: ""
+		font-family: 'Font Awesome 5 Free'
+		font-weight: bold
+		height: 40px
+		width: 40px
+		background: #BDBDBD
+		display: flex
+		border-radius: 50%
+		justify-content: center
+		align-items: center
+		margin-right: 10px
+		font-size: 20px
+		color: #FAFAFA
+		transition: .2s
+	&:hover
+		text-decoration: none
+		color: #424242
+	&:hover:before
+		background: #424242
+	& i
+		padding-left: 10px
+	&:focus
+		outline: none
+.avatar
+	&:before
+		content: "\f007"
+.not-login
+	&:before
+		content: "\f084"
+
+//   1.3.1 Login menu
+.login-menu
+	position: absolute
+	top: 80px
+	left: 0
+	background: #FAFAFA
+	z-index: 10
+	width: 100%
+	transition: .2s
+	opacity: 1
+	visibility: visible
+	z-index: 1
+	&.close
+		transform: translateY(-2em)
+		visibility: hidden
+		opacity: 0
+.dropdown-item
+	display: block
+	font-size: 18px
+	color: #424242
+	padding: 10px 0 10px 20px
+	transition: .2s
+	i
+		padding: 0 10px
+	&:hover
+		color: #BDBDBD
+		text-decoration: none
+
+// 2 Content
+
+//  2.1 Sidebar
+.sidebar
+	background: #FAFAFA
+	padding: 0
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			padding: 0
+			a
+				padding: 10px 0 10px 20px
+				font-size: 18px
+				line-height: 45px
+				color: #424242
+				transition: .2s
+				display: block
+				&:hover
+					text-decoration: none
+					font-weight: bold
+					background: #E0E0E0
+				i
+					font-size: 20px
+					padding-right: 10px
+					color: #BDBDBD
+					width: 32px
+			&:hover, &.active
+				background: #E0E0E0
+				i
+					color: #424242	
+//  2.2 Main
+.main
+	padding-bottom: 40px
+// 2.2.3 Aritcle
+.article-wrap
+	padding: 20px 0
+.article-h a
+	color: #212121
+	font-size: 24px
+	line-height: 32px
+	font-weight: bold
+	&:hover
+		color: #1E88E5
+		text-decoration: none
+.article-date,
+.article-cat
+	padding-top: 10px
+	padding-bottom: 10px
+	font-size: 16px
+	color: #BDBDBD
+	& a:hover
+		text-decoration: none
+.article-excerpt
+	font-size: 16px
+	line-height: 27px
+	color: #424242
+	padding-top: 10px
+
+//	 2.2.4 Pagination
+.pagination-wrap
+	padding: 20px 0
+	ul
+		margin: 0
+		padding: 0 20px
+		list-style-type: none
+		li
+			display: inline-block
+			a
+				position: relative
+				padding: 0 5px
+				font-family: montserrat
+				&.active
+					color: #BDBDBD
+					cursor: not-allowed
+					pointer-events: none
+			&:first-child a:before
+				content: "\f060"
+				font-family: 'Font Awesome 5 Free'
+				font-weight: bold
+				padding-right: 10px
+			&:last-child a:after
+				content: "\f061"
+				font-family: 'Font Awesome 5 Free'
+				font-weight: bold
+				padding-left: 10px
+
+//   2.3 Add block
+.add
+	padding-bottom: 20px
+.add-wrap
+	padding: 20px 0 40px
+.add-img
+	img
+		width: 100%
+.add-h
+	font-size: 18px
+	padding-top: 10px
+	font-weight: bold
+	color: #212121
+.add-excerpt
+	font-size: 16px
+	color: #424242
+	line-height: 27px
+	padding-top: 10px
+.add-price
+	font-size: 16px
+	font-weight: bold
+	color: #212121
+	padding-top: 20px
+.add-order
+	padding-top: 20px
+	color: #1E88E5
+	font-weight: bold
+	font-size: 16px
+	a:hover
+		text-decoration: none
+.more-read-wrap
+	padding: 20px 0 0
+
+// 3. Footer
+.footer
+	background: #FAFAFA
+	height: 80px
+	z-index: 200
+	.copyright i
+		padding: 0 5px
+
+// 4. Utilities for mobile first
+body
+	padding-top: 40px
+
+.top-menu-mobile-wrap
+	display: block
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 1
+	height: 40px
+	background: #FAFAFA
+.top-menu-mobile
+	height: 40px
+	.logo
+		font-size: 16px
+	.admin-menu
+		padding: 0
+		& i
+			color: #424242
+			border: 0
+			background: transparent
+	.m-main-menu
+		padding: 0
+		& i
+			color: #424242
+			border: 0
+			background: transparent
+
+.sidebar
+	position: fixed
+	top: 40px
+	left: 0
+	background: #fafafa
+	z-index: 10
+	transition: .2s
+	opacity: 1
+	visibility: visible
+	z-index: 1
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		font-weight: normal
+		li
+			padding: 0
+			a
+				padding: 0 0 0 20px
+				font-size: 14px
+				line-height: 40px
+				color: #424242
+				transition: .2s
+				display: block
+				&:hover, &.active
+					text-decoration: none
+					font-weight: bold
+					background: #E0E0E0
+				i
+					font-size: 16px
+					padding-right: 10px
+					color: #BDBDBD
+					width: 25px
+			&:hover
+				background: #E0E0E0
+				i
+					color: #424242
+	.close-admin-menu
+		position: absolute
+		top: 5px
+		right: 5px
+		i
+			font-size: 16px
+			color: #424242
+	&.close
+		transform: translateX(-2em)
+		visibility: hidden
+		opacity: 0
+.main-m-menu-inner 
+	position: fixed
+	top: 40px
+	right: 0
+	background: #fafafa
+	z-index: 10
+	transition: .2s
+	opacity: 1
+	visibility: visible
+	z-index: 1
+	padding: 0
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		font-weight: normal
+		li
+			padding: 0
+			a
+				padding: 0 0 0 20px
+				font-size: 14px
+				line-height: 40px
+				color: #424242
+				transition: .2s
+				display: block
+				&:hover, &.active
+					text-decoration: none
+					font-weight: bold
+					background: #E0E0E0
+				i
+					font-size: 16px
+					padding-right: 10px
+					color: #BDBDBD
+					width: 25px
+			&:hover
+				i
+					color: #424242
+	.close-main-m-menu
+		position: absolute
+		top: 5px
+		right: 18px
+		padding: 0
+	.login
+		padding-left: 20px
+		font-size: 16px
+		&:before
+			width: 20px
+			height: 20px
+			font-size: 12px
+		&:hover
+			text-decoration: none
+			color: #bdbdbd
+			background: transparent
+			&:before
+				background: #bdbdbd
+	&.close
+		transform: translateX(2em)
+		visibility: hidden
+		opacity: 0
+
+.article-h a
+	font-size: 18px
+	line-height: 22px
+
+.pagination-wrap ul
+	margin: 0 auto
+.copyright
+	justify-content: flex-start!important
+	background: #e0e0e0
+.footer .logo-wrap
+	height: 40px
+	.logo
+		font-size: 16px
+
+.max-width
+   max-width: 1440px
+
+.status-wrap
+	display: inline-block
+	padding-left: 20px
+	color: #BDBDBD
+	font-size: 16px
+	line-height: 20px
+	i
+		padding-right: 5px
+.filter-button
+	background: transparent
+	border: 0
+	color: #424242
+	outline: none
+	display: inline-block
+	&~ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		background: #fafafa
+		position: absolute
+		width: 100%
+		z-index: 10
+		position: absolute
+		transition: .2s
+		opacity: 1
+		visibility: visible
+		z-index: 1
+		&.close
+			transform: translateY(-1em)
+			visibility: hidden
+			opacity: 0
+		li
+			line-height: 30px
+			button, a
+				background: transparent
+				border: 0
+				color: #424242
+				font-size: 16px
+				width: 100%
+				outline: none
+				text-align: left
+				transition: .2s
+				&:hover
+					color: #1e88e5
+
+.category-wrap
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			line-height: 30px
+			margin-bottom: 10px
+			a
+				color: #424242
+				transition: .2s
+				&:hover
+					color: #1e88e5
+		& ul
+			padding-left: 20px
+			margin-top: -5px
+			padding-bottom: 10px
+
+.autorize-wrap
+	text-align: left
+	width: 320px
+	margin: 0 auto
+	.add-h
+		font-size: 30px
+		padding: 0 0 10px
+	.add-excerpt
+		font-size: 20px
+		padding: 10px 0 0
+		& a
+			padding-left: 5px
+			font-size: 16px
+			margin-top: -20px
+			display: block
+			margin-top: -10px
+			display: inline-block
+	input
+		width: 100%
+		border: 0
+		border-bottom: 1px solid #bdbdbd
+		color: #424242
+		margin: 10px 0
+		padding: 5px
+		&::placeholder
+			color: #bdbdbd
+		&[type=submit]
+			color: #1e88e5
+			transition: .2s
+			background: transparent
+			text-align: left
+			border-bottom: 0
+			cursor: pointer
+			&:hover
+				color: rgb(19, 96, 164)
+	.filter-button
+		&~ul li
+			line-height: 40px
+			button, a
+				color: #424242
+				font-size: 20px
+
+
+
+
+@import "media" // Always at the end
