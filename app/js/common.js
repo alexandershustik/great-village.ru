@@ -71,4 +71,12 @@ $(function() {
 		$(this).parent().parent().addClass('close');
 	});
 	
+	$('.date-filter .input-daterange').datepicker({
+		format: "dd/mm/yy",
+		language: "ru",
+		orientation: "bottom auto",
+		todayHighlight: true,
+		toggleActive: true
+	});
+
 });
