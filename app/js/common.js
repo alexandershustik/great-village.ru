@@ -94,7 +94,7 @@ $(function() {
 		$(this).parent().parent().addClass('close');
 	});
 	
-	$('.date-filter .input-daterange').datepicker({
+	$('.date-filter div').datepicker({
 		format: "dd/mm/yy",
 		language: "ru",
 		orientation: "bottom auto",
