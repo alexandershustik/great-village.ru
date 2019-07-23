@@ -46,6 +46,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+		'app/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

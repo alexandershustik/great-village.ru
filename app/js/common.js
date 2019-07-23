@@ -1,3 +1,5 @@
+	var event = [];
+	var url = [];
 $(function() {
 
 	$('.login').click(function(){
@@ -88,18 +90,51 @@ $(function() {
 	});
 
 	$('.filter-item').click(function(){
-		//$(this).html('df');
-		//$(this).parent().parent().prev('filter-button').html('df');
 		$(this).parent().parent().prev().html($(this).html() + ' <i class="fas fa-caret-down"></i>');
 		$(this).parent().parent().addClass('close');
 	});
 	
+	$.ajaxSetup({
+		async: false
+	});
+
+	$.getJSON('../events.json').done(function(data){
+		$.each(data,function(key, val){
+
+			event.push(val.event);
+			url.push(val.url);
+		}); //each
+
+	}); // getJson
+
 	$('.date-filter div').datepicker({
-		format: "dd/mm/yy",
 		language: "ru",
+		format: "dd/mm/yy",
 		orientation: "bottom auto",
 		todayHighlight: true,
-		toggleActive: true
+		toggleActive: true,
+		enableOnReadonly: false,
+		beforeShowDay: function(date){
+
+			for (var i = event.length - 1; i >= 0; i--) {
+
+				eventDay = event[i].substring(0, 2)
+				eventMonth = event[i].substring(3, 5) - 1
+				eventYear = event[i].substring(6, 10)
+				eventLink = url[i]
+
+				if (date.getMonth() == eventMonth){
+				if(date.getDate() == eventDay){
+						return {
+							content: '<a href="'+eventLink+'">'+eventDay+'</a>'
+						}
+					}
+				}
+
+			}
+		} // beforeShowDay
+	}).on('changeDate', function(e) {
+		error
 	});
 
 });
