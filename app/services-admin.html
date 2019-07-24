@@ -140,6 +140,11 @@
 					<li><a href="#" class="active"><i class="fas fa-tasks"></i> Заказы</a></li>
 					<li><a href="#"><i class="fas fa-mitten"></i> Работа</a></li>
 					<li><a href="#"><i class="fas fa-cart-arrow-down"></i> Мои заказы</a></li>
+
+					<!-- Filter -->
+					<div class="date-filter d-sm-block d-md-none d-lg-none d-xl-block">
+						<div></div>
+					</div>
 				</ul>
 			</div>
 
@@ -328,81 +333,74 @@
 					<div class="col-md-12 col-xl-4 add">
 						<!-- 2.2.3 Add -->
 						<div class="row add-wrap more-read-wrap">
-							<div class="col-12 add-h">
-								Фильтр:
-							</div>
-							<div class="col-12 add-excerpt">
-								Статус: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
-								<ul class="close">
-									<li>
-										<a href="#" class="filter-item">Все</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">В работе</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">Не в работе</a>
-									</li>
-								</ul>
+							<div class="col-12 col-md-6 col-lg-6 col-xl-12">
+								<div class="col-12 add-h">
+									Фильтр:
+								</div>
+								<div class="col-12 add-excerpt">
+									Статус: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
+									<ul class="close">
+										<li>
+											<a href="#" class="filter-item">Все</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">В работе</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">Не в работе</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-12 add-excerpt">
+									Поселок: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
+									<ul class="close">
+										<li>
+											<a href="#" class="filter-item">Москва</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">Ленинград</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">Саратов</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-12 add-excerpt">
+									Исполнители: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
+									<ul class="close">
+										<li>
+											<a href="#" class="filter-item">alexandershustik</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">Admin</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">Other</a>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="col-12 add-excerpt">
+									Дата: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
+									<ul class="close">
+										<li>
+											<a href="#" class="filter-item">23.05.03</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">23.54.32</a>
+										</li>
+										<li>
+											<a href="#" class="filter-item">43.43.53</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 
-							<div class="col-12 add-excerpt">
-								Поселок: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
-								<ul class="close">
-									<li>
-										<a href="#" class="filter-item">Москва</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">Ленинград</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">Саратов</a>
-									</li>
-								</ul>
-							</div>
-
-							<div class="col-12 add-excerpt">
-								Исполнители: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
-								<ul class="close">
-									<li>
-										<a href="#" class="filter-item">alexandershustik</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">Admin</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">Other</a>
-									</li>
-								</ul>
-							</div>
-							
-							<div class="col-12 add-excerpt">
-								Дата: <button class="filter-button">Все <i class="fas fa-caret-down"></i></button>
-								<ul class="close">
-									<li>
-										<a href="#" class="filter-item">23.05.03</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">23.54.32</a>
-									</li>
-									<li>
-										<a href="#" class="filter-item">43.43.53</a>
-									</li>
-								</ul>
-							</div>
-							
-							<div class="col-12 add-excerpt">
-								<div class="date-filter">
-									<!-- <div class="input-daterange input-group" id="datepicker">
-										<span class="input-group-addon">С</span>
-										<input type="text" class="input-sm form-control" name="start" />
-										<span class="input-group-addon">До</span>
-										<input type="text" class="input-sm form-control" name="end" />
-									</div>
-									<div class="date-submit-wrap">
-										<a href="#">Применить</a>
-									</div>
-									-->
+							<div class="col-12 col-md-6 col-lg-6">
+								<!-- Filter -->
+								<div class="date-filter d-sm-none d-md-block d-xl-none extra">
 									<div></div>
 								</div>
 							</div>
