@@ -107,12 +107,14 @@ $(function() {
 
 	}); // getJson
 
-	$('.date-filter div').datepicker({
+	$('.date-filter').datepicker({
 		language: "ru",
 		format: "dd/mm/yy",
 		orientation: "bottom auto",
 		todayHighlight: true,
 		toggleActive: true,
+		leftArrow: '◀︎',
+    	rightArrow: '▶︎',
 		enableOnReadonly: false,
 		beforeShowDay: function(date){
 			for (var i = event.length - 1; i >= 0; i--) {
