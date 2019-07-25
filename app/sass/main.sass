@@ -662,6 +662,8 @@ body
 	background: #ddd
 	border: 4px solid #ddd
 	border-radius: 0
+	&:hover
+
 .datepicker table tr td.today
 	background: #fafafa!important
 	border: 4px solid #ddd!important
@@ -688,7 +690,11 @@ body
 	border-radius: 0
 .datepicker tr:nth-child(2)
 	background: #fafafa
-
+.datepicker table tr td.active.active
+	background-color: #1e88e5
+	color: #fff
+	& a
+		color: #fff
 
 .appeals-wrap
 	padding: 0 20px 40px
