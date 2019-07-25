@@ -695,6 +695,25 @@ body
 	color: #fff
 	& a
 		color: #fff
+.datepicker table tr td span.month,
+.datepicker table tr td span.year,
+.datepicker table tr td span.decade,
+.datepicker table tr td span.century
+	color: #999
+	transition: .2s
+	background: #fafafa
+	border: 4px solid #ddd
+	border-radius: 0
+	font-size: 16px
+	line-height: 47px
+	&:hover
+		background: darken(#fafafa, 20%)
+		color: darken(#999, 20%)
+		border-color: darken(#ddd, 20%)
+	&.focused
+		background: darken(#fafafa, 10%)
+		color: darken(#999, 10%)
+		border-color: darken(#ddd, 10%)
 
 .appeals-wrap
 	padding: 0 20px 40px
